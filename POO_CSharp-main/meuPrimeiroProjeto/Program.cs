@@ -3,25 +3,62 @@
 namespace meuPrimeiroProjeto
 {
     class Program
-    {
+    {    
         static void Main(string[] args)
         {
-            ContaCorrente conta_da_barbara = new ContaCorrente ("Barbara", 12345, 123, 10);
-            ContaCorrente conta_da_maria = new ContaCorrente ("Maria", 12345, 789, 100);
-            ContaCorrente conta_do_joao = new ContaCorrente ("Joao", 12345, 456, 1000);
+            ContaCorrente contaDaBarbara = new ContaCorrente("Barbara", 863, 863146, 10);
+            ContaCorrente contaDoBruno = new ContaCorrente("Bruno", 863, 123456, 100);
+            ContaCorrente contaDaGabriel = new ContaCorrente("Gabriel", 863, 124578, 1000);
 
-            Console.WriteLine("A conta é do (a) " + conta_da_barbara.Titular + 
-            ", a agência é " + conta_da_barbara.Agencia + " e o número é " 
-            + conta_da_barbara.Numero + ".");
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDaBarbara.titular);
+            Console.WriteLine("Agência: " + contaDaBarbara.agencia);
+            Console.WriteLine("Número da conta: " + contaDaBarbara.numero);
+            Console.WriteLine("Saldo: " + contaDaBarbara.saldo);
+            Console.WriteLine("******************************************************");
 
-            Console.WriteLine("A conta é do (a) " + conta_da_maria.Titular + 
-            ", a agência é " + conta_da_maria.Agencia + " e o número é " 
-            + conta_da_maria.Numero + ".");
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDoBruno.titular);
+            Console.WriteLine("Agência: " + contaDoBruno.agencia);
+            Console.WriteLine("Número da conta: " + contaDoBruno.numero);
+            Console.WriteLine("Saldo: " + contaDoBruno.saldo);
+            Console.WriteLine("******************************************************");
 
-            Console.WriteLine("A conta é do (a) " + conta_do_joao.Titular + 
-            ", a agência é " + conta_do_joao.Agencia + " e o número é " 
-            + conta_do_joao.Numero + ".");
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDaGabriel.titular);
+            Console.WriteLine("Agência: " + contaDaGabriel.agencia);
+            Console.WriteLine("Número da conta: " + contaDaGabriel.numero);
+            Console.WriteLine("Saldo: " + contaDaGabriel.saldo);
+            Console.WriteLine("******************************************************");
+
+            Console.WriteLine("************** OPERAÇÃO BANCÁRIA **************");
+
+            bool retorno_funcao = contaDaBarbara.Sacar(100);
+            bool retorno_funcao1 = contaDoBruno.Sacar(100);
+            bool retorno_funcao2 = contaDaGabriel.Sacar(100);
+
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDaBarbara.titular);
+            Console.WriteLine("Agência: " + contaDaBarbara.agencia);
+            Console.WriteLine("Número da conta: " + contaDaBarbara.numero);
+            Console.WriteLine("Saldo: " + contaDaBarbara.saldo);
+            Console.WriteLine("******************************************************");
+
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDoBruno.titular);
+            Console.WriteLine("Agência: " + contaDoBruno.agencia);
+            Console.WriteLine("Número da conta: " + contaDoBruno.numero);
+            Console.WriteLine("Saldo: " + contaDoBruno.saldo);
+            Console.WriteLine("******************************************************");
+
+            Console.WriteLine("************** RELATÓRIO GERAL DA CONTA **************");
+            Console.WriteLine("Titular: " + contaDaGabriel.titular);
+            Console.WriteLine("Agência: " + contaDaGabriel.agencia);
+            Console.WriteLine("Número da conta: " + contaDaGabriel.numero);
+            Console.WriteLine("Saldo: " + contaDaGabriel.saldo);
+            Console.WriteLine("******************************************************");
 
         }
+       
     }
 }
